@@ -3,7 +3,7 @@ Luigi.setConfig({
   navigation: {
     nodes: () => [
       {
-        pathSegment: 'home',
+        pathSegment: '#home',
         label: 'Home',
         children: [
           {
