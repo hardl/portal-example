@@ -3,23 +3,20 @@ Luigi.setConfig({
   navigation: {
     nodes: () => [
       {
-        pathSegment: '#home',
+        pathSegment: 'home',
         label: 'Home',
+        hideFromNav: true,
         children: [
           {
             category: { label: 'Links', icon: 'cloud' },
+            pathSegment: 'luigi',
             label: 'Luigi Project',
-            externalLink: {
-              url: 'https://luigi-project.io/'
+            isolateView: true,
+            viewUrl: 'https://luigi-project.io/',
+            loadingIndicator: {
+              enabled: false
             }
           },
-          {
-            category: 'Links',
-            label: 'Angular',
-            externalLink: {
-              url: 'https://angular.io/'
-            }
-          }
         ]
       }
     ]
