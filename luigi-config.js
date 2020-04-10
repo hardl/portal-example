@@ -1,11 +1,10 @@
+//you can now use ES6 goodies here
 Luigi.setConfig({
   navigation: {
     nodes: () => [
       {
         pathSegment: 'home',
         label: 'Home',
-        icon: 'home',
-        viewUrl: '/sampleapp.html#/home',
         children: [
           {
             category: { label: 'Links', icon: 'cloud' },
@@ -25,11 +24,12 @@ Luigi.setConfig({
       }
     ]
   },
+  routing: {
+    useHashRouting: true
+  },
   settings: {
-    header: {
-      title: 'Luigi Angular App',
-      logo: '/logo.svg'
-    },
-    responsiveNavigation: 'simpleMobileOnly'
+    appLoadingIndicator: {
+      hideAutomatically: true
+    }
   }
 });
